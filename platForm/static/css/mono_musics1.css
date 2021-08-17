@@ -1,0 +1,41 @@
+#black{
+    background-color:black;
+    background-size:100% 100%;
+}
+
+#title_block{
+    background-color:#FFF9FF;
+    border: solid;
+    border-radius: 15px;
+    border: 7px solid;
+    border-color: #FF00EE;
+    margin:0px 50px 0px 50px;
+}
+.left_block{
+    margin:0px 100px 0px 30px;
+}
+#views_date{
+    float:right;
+    margin:0px 100px 0px 30px;
+}
+
+#title_block h2{
+    font-size:100px;
+}
+
+#title_block p{
+    text-align:center;
+    font-size:20px;
+}
+
+#comment_block{
+    background-color:#FFF9FF;
+    border: solid;
+    border-radius: 15px;
+    border: 7px solid;
+    border-color: #EE00FF;
+    margin:0px 50px 0px 50px;
+}
+#comment_post{
+    margin:0px 100px 0px 30px;
+}

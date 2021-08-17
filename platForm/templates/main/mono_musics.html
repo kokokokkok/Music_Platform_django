@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div id="black">
+        <div id="title_block">
+                <div id="views_date">
+                        <h4 >投稿日：{{ post.published_date }}</h4>
+                        <h4>視聴回数：{{ post.views }}</h4>
+                </div>
+
+                <h2 class="left_block">{{ post.music_name }}</h2>
+
+
+
+                <audio class="left_block"
+                    controls
+                    currentTime
+                    controlslist="nodownload"
+                    src="/media/{{ post.music_main }}">
+                </audio><br><br>
+
+                <p>作者名:{{ post.author }}</p>
+                <p>作者コメント</p>
+                <p>{{ post.author_comment }}</p>
+
+        </div><br><br>
+
+        <div id="comment_block">
+                <div id="comment_post">
+                        <form action="" method="POST"> <br><!--djangoでファイルのアップロードをする場合enctype="multipart/form-data"の指定（データのエンコードの指定）がいる-->
+                                <p>投稿者：</p>
+                                {{ form.author }}
+                                <p>コメント :</p>
+                                {{ form.text }}
+                                {% csrf_token %}
+                                <button type="submit">送信</button>
+                        </form>
+
+                        {% for i in comment_list %}
+                                <p>投稿者：{{ i.author }}</p>
+                                <p>{{ i.text }}</p> <!--ここでｐｋを定義して（定義とは、musicに番号をつけている事）urlのmono?musicに送っている-->
+                        {% endfor %}
+                </div>
+        </div>
+</div>
+{% endblock %}

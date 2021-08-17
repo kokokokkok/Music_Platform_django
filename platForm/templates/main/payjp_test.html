@@ -1,0 +1,31 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>サンプルアプリケーション</title>
+</head>
+
+<body>
+  <h1>お支払い</h1>
+
+  {% if charge %}
+    <p>{{ amount }}円のお支払いが完了しました。</p>
+    <br>
+    <p>customer: {{ customer }}</p>
+    <br>
+    <p>Charge: {{ charge }}</p>
+  {% else %}
+    <form action="{% url 'pay_test' %}" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="amount">お支払い</label>
+        <input type="number" name="amount" id="amount" required>
+      </div>
+
+      <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="{{ public_key }}">
+      </script>
+    </form>
+  {% endif %}
+</body>
+</html>

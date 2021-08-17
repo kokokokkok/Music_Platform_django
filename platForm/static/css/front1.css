@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+#body{
+    background-color:black;
+}
+ul {
+  list-style: none;
+}
+
+
+
+.top{
+    text-align:right;
+    font-size:30;
+}
+.top_content{
+    margin: 0px 50px 0px 0px;
+    padding: 5px 20px 5px 20px;
+    /*font-family: 'Sawarabi Mincho', sans-serif;*/
+    /*font-family: 'Sacramento', cursive;*/
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+    border-radius: 10px 10px 10px 10px;
+}
+
+#play{
+    background-color:#FD00DB;
+    color:black;
+
+    }
+#sign{
+    background-color:#2BC1DD;
+    color:black;
+
+    }
+#create{
+    background-color:#8447F0;
+    color:#F6BE00;
+    }
+
+
+
+.content{
+    background-color:black;
+    border: solid;
+    border: 5px solid;
+    border-color: #DE2BEB;
+    text-align:center;
+    margin: 0px 200px 0px 200px;
+    /*font-family: 'Sawarabi Mincho', sans-serif;*/
+    /*font-family: 'Sacramento', cursive;*/
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+.content h1{
+    color:#F111B5;
+    font-size:100;
+}
+.content p{
+    margin:10px 200px 10px 200px;
+    color:white;
+    size:30;
+}
+
+#block{
+    text-align:center;
+    /*font-family: 'Sawarabi Mincho', sans-serif;*/
+    /*font-family: 'Sacramento', cursive;*/
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+#block ul{
+    display: table;
+
+    margin:20px 20px 20px 20px;
+    overflow: hidden;
+    display: flex;
+}
+
+#block li{
+    background-color:black;
+    border: solid;
+    border-radius: 15px;
+    border: 5px solid;
+    border-color: #DE2BEB;
+    text-align:center;
+    margin:10px 20px 10px 20px;
+    width:33%;
+
+
+}
+.subtitle{
+    color:#F5FD00;
+    font-size:40px;
+    font-weight:500;
+    padding:10px 10px 10px 10px;
+}
+.description{
+    color:white;
+    font-size:30px;
+}

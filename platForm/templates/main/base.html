@@ -1,0 +1,39 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/base5.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mono_musics1.css' %}">
+
+</head>
+
+<body>
+    <div class="top"><br><br>
+        <div id="title">
+            <h1>Raspberry Music</h1>
+            <div class="top">
+                <a id="play" class="top_content" href="home">Play!</a>
+                <a id="sign" class="top_content" href="accounts/login">Sign in</a>
+                <a id="create" class="top_content" href="accounts/signup/"> Create Account</a>
+                <a id="up" class="top_content" href="upload">Upload</a>
+
+            </div><br><br>
+        </div>
+
+        <div id="search">
+            <form method="get" action="{% url 'home' %}" class="search_container">
+                <input type="text" name="keyword" size="25" placeholder="　キーワード検索">
+                <input type="submit" value="&#xf002">
+            </form>
+            <hr id="hr">
+        </div><br>
+    </div>
+
+
+        {% block content %}
+        {% endblock %}
+
+</body>

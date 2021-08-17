@@ -1,0 +1,17 @@
+<h1>New upload</h1>
+    <form action="" method="POST" enctype="multipart/form-data"> <!--djangoでファイルのアップロードをする場合enctype="multipart/form-data"の指定（データのエンコードの指定）がいる-->
+        <a>投稿者名</a>
+        {{form.author}}<br><br>
+        <a>music_name :</a>
+        {{ form.music_name }}<br><br>
+        <a>music_main :</a>
+        {{ form.music_main }}<br><br>
+        <a>カテゴリ</a>
+        {{form.category_name}}<br><br>
+        <a>この音楽に対するコメント</a>
+        {{form.author_comment}}<br><br>
+
+
+        {% csrf_token %}
+        <button type="submit">送信</button>
+    </form> <!--{{form.as_p}}ですべてのものを表示できる-->

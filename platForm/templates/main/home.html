@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block content %}
+
+<div id="contents">
+
+    {% for music in musics %}
+        <div class = "mono">
+            <a href="{% url 'mono_music' pk=music.pk %}" class="yoko">{{ music.music_name }}</a> <!--ここでｐｋを定義して（定義とは、musicに番号をつけている事）urlのmono?musicに送っている-->
+            <h5 class="yoko">視聴回数：{{ music.views }}</h5>
+            <!-- <h5>{{ music.music_category }}</h5> 作者名、作者コメント、-->
+            <br>
+
+        </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
